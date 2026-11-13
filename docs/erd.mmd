@@ -1,0 +1,34 @@
+erDiagram
+  users ||--o{ posts : "올린다 (seller_id)"
+  users ||--o{ trades : "요청한다 (requester_id)"
+  posts ||--o{ trades : "거래된다 (post_id)"
+  users { int id PK
+    varchar email UK
+    varchar password
+    varchar nickname
+    varchar phone_number UK
+    int entry_year
+    varchar student_id
+    timestamp created_at }
+  posts { int id PK
+    int seller_id FK
+    varchar title
+    text description
+    varchar category
+    varchar size
+    varchar fabric
+    varchar texture
+    varchar item_condition
+    varchar trade_type
+    int price
+    varchar location
+    varchar image_url
+    varchar status
+    timestamp created_at }
+  trades { int id PK
+    int post_id FK
+    int requester_id FK
+    varchar message
+    varchar status
+    timestamp created_at
+    datetime completed_at }

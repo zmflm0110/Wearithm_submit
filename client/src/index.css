@@ -1,0 +1,40 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@700;800&display=swap");
+
+:root {
+  --ink: #17142b;  --body: #4a4658;  --sub: #6a6579;  --line: #dfdae9;  --surface: #ffffff;  --page: #f4f2f8;  --fill: #ebe7f3;
+  --accent: #6d3cff;  --accent-bright: #9b7bff;  --accent-text: #5126d9;  --accent-soft: #ece5ff;
+  --calm: #0f9d84;  --calm-text: #0b7a67;
+  --calm-soft: #ddf5ef;
+  --amber: #a35f00;  --amber-soft: #fff0d6;
+  --red: #d13a3a;
+  --radius-card: 22px;
+  --radius-box: 16px;
+  --ease: cubic-bezier(.16, 1, .3, 1);
+  --num: "Unbounded", "Pretendard", sans-serif;
+  --green: var(--accent);
+  --green-dark: var(--accent-text);
+  --green-soft: var(--accent-soft);
+  --bg: var(--fill);
+  --paper: var(--page);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+button { border: none; cursor: pointer; font: inherit; transition: transform .14s var(--ease), filter .14s; }
+button:active:not(:disabled) { transform: scale(.97); }
+input, select, textarea { font: inherit; }
+img { max-width: 100%; vertical-align: middle; }
+h1, h2, h3, h4 { color: var(--ink); letter-spacing: -0.03em; }
+body {
+  font-size: 15px;
+  font-family: "Pretendard", "Apple SD Gothic Neo", "Noto Sans CJK KR", "Noto Sans KR", sans-serif;
+  color: var(--ink);
+  background: #e9e5f0;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
